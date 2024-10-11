@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pizza Shop Order Form">
+    <title>Pizza Shop</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to the Pizza Shop</h1>
+        <style>
+            header {
+                background-image: url('pizza_header.jpg');
+                background-size: cover;
+                background-position: center;
+                height: 300px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+            }
+
+            header h1 {
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: 20px;
+                border-radius: 10px;
+            }
+        </style>
+
+    </header>
+
+    <main>
+        <h2>Order Your Pizza</h2>
+        <div style="display: flex; align-items: center;">
+
+            <form id="pizzaForm" style="flex: 1;">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label>How many pizzas?</label>
+                <input type="number" id="pizzaCount" name="pizzaCount" min="1" max="10" required><br><br>
+
+                <label for="size">Select Size:</label>
+                <select id="size" name="size" required>
+                    <option value="">--Select Size--</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select><br><br>
+
+                <label>Select Toppings:</label><br>
+                <input type="checkbox" id="pepperoni" name="topping" value="Pepperoni">
+                <label for="pepperoni">Pepperoni</label><br>
+                <input type="checkbox" id="mushrooms" name="topping" value="Mushrooms">
+                <label for="mushrooms">Mushrooms</label><br>
+                <input type="checkbox" id="onions" name="topping" value="Onions">
+                <label for="onions">Onions</label><br><br>
+
+                <button type="submit">Place Order</button>
+            </form>
+            <img src="pizza_image.jpg" alt="Delicious Pizza" width="300" style="margin-left: 20px;">
+
+            <div id="confirmation" style="display:none;">
+                <h3>Order Confirmation</h3>
+                <p id="orderDetails"></p>
+            </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pizza Shop</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
